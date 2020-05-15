@@ -1,19 +1,21 @@
-<h2 class="text-center text-primary">Add a New Piece</h2>
+
+<h2 class="text-center text-primary">Edit a Piece</h2>
+ 
 
 <!-- TODO: Add a form for making a new piece. Should post to /pieces -->
 <div class="container">
-    <form method="POST" action="/pieces">
+    <form method="POST" action="/pieces/<%=piece.id%>/?_method=PUT">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name">
+            <input type="text" name="name" value="<%=piece.name%>">
         </div>
         <div class="form-group">
             <label for="image">Image</label>
-            <input type="text" name="image">
+            <input type="text" name="image" value="<%=piece.image%>">
         </div>
         <div class="form-group">
             <label for="originCountry">Origin Country</label>
-            <input type="text" name="originCountry">
+            <input type="text" name="originCountry" value="<%=piece.originCountry%>">
         </div>
         <div class="form-group">
             <label for="museum">Museum</label>
@@ -26,23 +28,23 @@
         <label for="creat">Creator</label>
         <div class="form-group">
             <label for="creator">First Name</label>
-            <input type="text" name="firstname">
+            <input type="text" name="firstname" value="<%=piece.creator.firstname%>">
         </div>
         <div class="form-group">
             <label for="creator">Last Name</label>
-            <input type="text" name="lastname">
+            <input type="text" name="lastname" value="<%=piece.creator.lastname%>">
         </div>
         <div class="form-group">
             <label for="creator">Image</label>
-            <input type="text" name="image">
+            <input type="text" name="creatorImage" value="<%=piece.creator.image%>">
         </div>
         <div class="form-group">
             <label for="creator">Birth year</label>
-            <input type="text" name="birthyear">
+            <input type="text" name="birthyear" value="<%=piece.creator.birthyear%>">
         </div>
         <div class="form-group">
             <label for="creator">Death year</label>
-            <input type="text" name="deathyear">
+            <input type="text" name="deathyear" value="<%=piece.creator.deathyear%>">
         </div>
         <button type="submit">Submit</button>
 
