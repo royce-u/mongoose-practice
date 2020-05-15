@@ -1,2 +1,8 @@
-<!-- DELETE CODE BELOW THIS LINE -->
-<h2>TODO: Show a specific Piece</h2>
+
+<h1><%= piece.name %></h1>
+<img src="<%=piece.image%>" alt="<%=piece.name%>">
+<ul>
+    <li> Origin Country: <%=piece.originCountry%></li>
+    <li>Museum: <%=piece.museum.name%></li>
+    <li>Creator: <%=piece.creator.firstname%> <%=piece.creator.lastname%></li>
+</ul>

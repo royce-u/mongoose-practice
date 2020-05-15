@@ -1,0 +1,5 @@
+<select name="creator" id="creator" class="form-control">
+                <% piece.forEach((p) => { %>
+                <option value="<%=p.creator.firstname%>"><%=p.creator.firstname%></option>
+                <%})%>
+            </select>

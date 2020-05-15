@@ -22,7 +22,7 @@ db.Museum.create({
       birthyear: 1452,
       deathyear: 1519
     }
-  })
+  })            
   .then(result => {
     console.log('successfully created Mona Lisa');
     process.exit();
